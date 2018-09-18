@@ -31,7 +31,7 @@ frequency: freq
   });
 
 //clear
-location.reload();
+document.getElementById("form").reset();
 
 });
   
