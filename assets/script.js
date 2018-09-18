@@ -63,6 +63,9 @@ var tMinutesTillTrain = newFreq - tRemainder;
 // Next Train
 var nextTrain = moment().add(tMinutesTillTrain, "minutes");
 var catchTrain = moment(nextTrain).format("HH:mm");
+
+//convert to standard time
+
   
 // Put on page
 $("#all-display").append(
