@@ -14,10 +14,10 @@ var firstTrain = $("#firstTrain").val().trim();
 var freq = $("#interval").val().trim();
 
 
-console.log(trainName)
-console.log(destination)
-console.log(firstTrain)
-console.log(freq)
+//console.log(trainName)
+//console.log(destination)
+//console.log(firstTrain)
+//console.log(freq)
 
   
   
@@ -49,7 +49,7 @@ var startTimeConverted = moment(newFirstTrain, "hh:mm");
 // Current Time
 var currentTime = moment();
   
-console.log(currentTime)
+//console.log(currentTime)
 
 // Difference 
 var diffTime = moment().diff(moment(startTimeConverted), "minutes");
