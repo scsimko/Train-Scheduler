@@ -46,9 +46,9 @@ var newFreq = childSnapshot.val().frequency;
 // Start Time 
 var startTimeConverted = moment(newFirstTrain, "hh:mm");
   
+//Test//
 // Current Time
-var currentTime = moment();
-  
+//var currentTime = moment();
 //console.log(currentTime)
 
 // Difference 
