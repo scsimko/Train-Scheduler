@@ -60,11 +60,17 @@ var tRemainder = diffTime % newFreq;
 // Min to next train
 var tMinutesTillTrain = newFreq - tRemainder;
   
-// Next Train
+// Next Train 
 var nextTrain = moment().add(tMinutesTillTrain, "minutes");
 var catchTrain = moment(nextTrain).format("HH:mm");
 
-//convert to standard time
+//convert to standard time ***Got from StackOverflow ** I am shocked that it worked :)
+function toStandardTime(militaryTime) {
+militaryTime = militaryTime.split(':');
+return (militaryTime[0].charAt(0) == 1 && militaryTime[0].charAt(1) > 2) ? (militaryTime[0] - 12) + ':' + militaryTime[1] + ':' + ' P.M.' : militaryTime.join(':') + ' A.M.'
+}
+
+var timeCon = toStandardTime(catchTrain);
 
   
 // Put on page
@@ -72,7 +78,7 @@ $("#all-display").append(
 ' <tr><td>' + newTrain +
 ' </td><td>' + newLocation +
 ' </td><td>' + newFreq +
-' </td><td>' + catchTrain +
+' </td><td>' + timeCon +
 ' </td><td>' + tMinutesTillTrain + ' </td></tr>');
   
   });
